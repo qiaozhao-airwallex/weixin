@@ -1,0 +1,10 @@
+<view class="container">
+  <wxc-flex class="wrap" cross="top" wrap="wrap">
+    <view class="image_container" wx:for="{{products}}" wx:key="{{item.id}}">
+      <image class="image_frame" src="{{item.mainImage}}" mode="aspectFit" bindtap="productDetails"></image>
+    </view>
+  </wxc-flex>
+  <button bindtap="createNew">
+    <wxc-icon size="48" type="camera" />
+  </button>
+</view>

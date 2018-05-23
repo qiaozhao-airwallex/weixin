@@ -1,0 +1,17 @@
+<view class="container" >
+  <wxc-flex class="wrap" cross="top" wrap="wrap">
+    <view class="image_container" wx:for="{{image_photos}}" wx:key="{{item}}">
+      <image class="image_frame" src="{{item}}" mode="aspectFit" bindtap="previewImage"></image>
+      <view class="image_progress" wx:if="{{image_upload_progress[index] > 0 && image_upload_progress[index] < 100}}">
+      {{image_upload_progress[index]}}%
+      </view>
+    </view>
+  </wxc-flex>
+  <button bindtap="selectImages">
+    <wxc-icon size="48" type="camera" />
+  </button>
+  <wxc-input type="text" title="物品名称" placeholder="例如 床 桌子 等" bindblur="subjectInputEvent" value="{{subject}}"></wxc-input>
+  <textarea title="物品简介" placeholder="物品简介" bindblur="descriptionInputEvent" value="{{description}}"></textarea>
+  <wxc-dialog class="wxc-dialog" title="草稿" content="草稿未发表，是否继续编辑" confirm-text="是" cancel-text="否" bindconfirm="onDraftContinue" bindcancel="onDraftCancel"></wxc-dialog>
+  <button bindtap="submit">发布</button>
+</view>  

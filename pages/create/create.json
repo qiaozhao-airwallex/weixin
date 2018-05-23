@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "wxc-input": "../../dist/packages/@minui/wxc-input/dist/index",
+    "wxc-flex": "../../dist/packages/@minui/wxc-flex/dist/index",
+    "wxc-icon": "../../dist/packages/@minui/wxc-icon/dist/index",
+    "wxc-button": "../../dist/packages/@minui/wxc-button/dist/index",
+    "wxc-dialog": "../../dist/packages/@minui/wxc-dialog/dist/index"
+  }
+}
