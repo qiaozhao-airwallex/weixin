@@ -1,0 +1,12 @@
+.product_area {
+  display: block;
+  width: 100%;
+  background: #f2f2f2;
+  margin-bottom:15rpx;
+}
+.subject_text {
+  color: red;
+}
+.content_text {
+  text-align: left;
+}

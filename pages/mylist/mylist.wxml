@@ -4,9 +4,12 @@
       新建
     </button>
   </view>
-  <wxc-flex class="image_area" cross="top" wrap="wrap">
-    <view class="image_container_col_3" wx:for="{{products}}" wx:key="{{item.id}}">
-      <image id="{{item.id}}" class="image_frame_col_3" src="{{item.mainImage}}" mode="aspectFit" bindtap="productDetails"></image>
-    </view>
-  </wxc-flex>
+  <view class="product_area" wx:for="{{products}}" wx:for-item="product" wx:for-index="product_idx" wx:key="{{product.id}}">
+    <wxc-flex class="image_area" cross="top" wrap="wrap">
+      <view class="image_container_col_3" wx:for="{{products[product_idx].top3Images}}" wx:for-item="image" wx:for-index="image_idx" wx:key="{{image.id}}">
+        <image id="{{product.id}}" class="image_frame_col_3" src="{{image.url}}" mode="aspectFit" bindtap="productDetails"></image>
+      </view>
+    </wxc-flex>
+    <view class="content_text"><text class="subject_text">#{{product.subject}}#</text>{{product.description}}</view>
+  </view>
 </view>

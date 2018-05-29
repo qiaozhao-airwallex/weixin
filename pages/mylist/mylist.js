@@ -28,11 +28,22 @@ Page({
               id: item.id,
               subject: item.subject,
               description: item.description,
-              mainImage: util.getFullImagePath(item.imageList[0])
+              top3Images: item.imageList.length > 0 ? 
+              item.imageList.slice(0, 3).map(imageItem => {
+                return {
+                  id: imageItem.id,
+                  url: util.getFullImagePath(imageItem)
+                }
+              }) : [{
+                id: null,
+                url: util.getFullImagePath(null)
+              }]
             }
           })
         })
+        console.log("--------")
         console.log(that.data.products)
+        console.log("++++++++")
       },
       fail: function (err) {
         console.log(err)

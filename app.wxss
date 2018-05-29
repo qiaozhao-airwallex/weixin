@@ -8,27 +8,25 @@ page {
   flex-direction: column;
  } 
 .header_bar {
-  margin: 5px;
   width: 100%;
-  height: 40px;
+  height: 80rpx;
   background-color: grey;
 }
 
 .btn_right {
   float:right;
-  margin: 5px;
-  margin-right: 10px;
+  margin: 5rpx;
+  margin-right: 10rpx;
 }
 .image_container_col_3 {
-  padding: 2px;
-  width: 100px;
-  height: 60px;
+  padding: 10rpx;
+  width: 30%;
   position: relative;
   text-align: center;
   vertical-align: middle;
 }
 .image_container_col_1 {
-  padding: 2px;
+  padding: 10rpx;
   position: relative;
   text-align: center;
   vertical-align: middle;
@@ -37,8 +35,8 @@ page {
   width: 100%;
 }
 .image_frame_col_3 {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 } 
 .image_progress {
   position: absolute;
@@ -48,7 +46,7 @@ page {
 }
 .image_area {
   display: block;
-  width: 98%;
+  height: 200rpx; 
 }
 image {
   display: inline-block;
