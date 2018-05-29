@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="header_bar">
+    <button class="btn_right" size="mini" bindtap="edit">
+      <wxc-icon size="32" type="edit" />
+    </button>
+    <button type="warn" class="btn_right" size="mini" bindtap="dicard">删除</button>
+  </view>
+  <view class="title">{{product.subject}}</view>
+  <view class="description">{{product.description}}</view>
+  <view class="image_area">
+    <view class="image_container_col_1" wx:for="{{product.imageList}}" wx:key="{{item.id}}">
+      <image id="{{item.id}}" class="image_frame_col_1" src="{{item.imageURL}}" mode="aspectFit"></image>
+    </view>
+  </view>
+</view>

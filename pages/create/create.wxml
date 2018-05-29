@@ -1,7 +1,7 @@
 <view class="container" >
-  <wxc-flex class="wrap" cross="top" wrap="wrap">
-    <view class="image_container" wx:for="{{image_photos}}" wx:key="{{item}}">
-      <image class="image_frame" src="{{item}}" mode="aspectFit" bindtap="previewImage"></image>
+  <wxc-flex class="image_area" cross="top" wrap="wrap">
+    <view class="image_container_col_3" wx:for="{{image_photos}}" wx:key="{{item}}">
+      <image class="image_frame_col_3" src="{{item}}" mode="aspectFit" bindtap="previewImage"></image>
       <view class="image_progress" wx:if="{{image_upload_progress[index] > 0 && image_upload_progress[index] < 100}}">
       {{image_upload_progress[index]}}%
       </view>

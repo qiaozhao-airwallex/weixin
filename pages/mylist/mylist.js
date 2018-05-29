@@ -46,4 +46,10 @@ Page({
       url: '../create/create'
     })
   },
+
+  productDetails: function (event) {
+    wx.navigateTo({
+      url: '../view/view?id=' + event.target.id
+    })
+  }
 })

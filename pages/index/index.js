@@ -55,7 +55,7 @@ Page({
         console.log(res.data)
         app.globalData.session = res.data
         wx.navigateTo({
-          url: '../my/my'
+          url: '../mylist/mylist'
         })
       },
       fail: function (err) {
