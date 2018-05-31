@@ -3,7 +3,7 @@
     <button class="btn_right" size="mini" bindtap="edit">
       <wxc-icon size="32" type="edit" />
     </button>
-    <button type="warn" class="btn_right" size="mini" bindtap="dicard">删除</button>
+    <button type="warn" class="btn_right" size="mini" bindtap="deleteProduct">删除</button>
   </view>
   <view class="title">{{product.subject}}</view>
   <view class="description">{{product.description}}</view>
@@ -12,4 +12,5 @@
       <image id="{{item.id}}" class="image_frame_col_1" src="{{item.imageURL}}" mode="aspectFit"></image>
     </view>
   </view>
+    <wxc-dialog class="wxc-dialog" title="删除" content="删除后无法恢复，确定删除？" confirm-text="是" cancel-text="否" bindconfirm="onDeleteConfirm" bindcancel="onDeleteCancel"></wxc-dialog>
 </view>

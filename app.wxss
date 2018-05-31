@@ -44,6 +44,11 @@ page {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.delete_button {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+}
 .image_area {
   display: block;
   height: 200rpx; 

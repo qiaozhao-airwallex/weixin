@@ -41,9 +41,6 @@ Page({
             }
           })
         })
-        console.log("--------")
-        console.log(that.data.products)
-        console.log("++++++++")
       },
       fail: function (err) {
         console.log(err)
@@ -60,7 +57,7 @@ Page({
 
   productDetails: function (event) {
     wx.navigateTo({
-      url: '../view/view?id=' + event.target.id
+      url: '../view/view?id=' + event.currentTarget.id
     })
   }
 })

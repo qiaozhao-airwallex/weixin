@@ -43,5 +43,47 @@ Page({
         console.log(err)
       }
     })
-  }
+  },
+
+  showDeleteDialog() {
+    let dialogComponent = this.selectComponent('.wxc-dialog')
+    dialogComponent && dialogComponent.show();
+  },
+  hideDeleteDialog() {
+    let dialogComponent = this.selectComponent('.wxc-dialog')
+    dialogComponent && dialogComponent.hide();
+  },
+
+  deleteProduct: function () {
+    this.showDeleteDialog()
+  },
+
+  onDeleteConfirm: function () {
+    var that = this;
+    that.hideDeleteDialog()
+    var id = that.data.product.id;
+    wx.request({
+      url: config.baseURL + "product/" + id,
+      method: "DELETE",
+      header: {
+        "Authorization": "Bearer " + app.globalData.session.access_token,
+        'Content-Type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res)
+        console.log("successfully deleted product:" + id)
+        wx.navigateTo({
+          url: '../mylist/mylist'
+        })
+
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })
+  },
+
+  onDeletCancel: function () {
+    this.hideDeleteDialog()
+  },
 })

@@ -5,3 +5,7 @@
   display: block;
   width: 100%;
 }
+.image_area {
+  display: block;
+  height: 30%;
+}

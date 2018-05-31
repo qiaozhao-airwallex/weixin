@@ -5,6 +5,9 @@
       <view class="image_progress" wx:if="{{image_upload_progress[index] > 0 && image_upload_progress[index] < 100}}">
       {{image_upload_progress[index]}}%
       </view>
+      <view class="delete_button" bindtap="deleteImage" data-image-idx="{{index}}">
+        <wxc-icon size="24" type="delete"></wxc-icon>
+      </view>
     </view>
   </wxc-flex>
   <button bindtap="selectImages">

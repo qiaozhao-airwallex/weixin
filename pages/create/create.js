@@ -173,5 +173,14 @@ Page({
         description: this.data.description
       })
     }
+  },
+  deleteImage: function(event) {
+    var that = this;
+    var index = event.currentTarget.dataset.imageIdx;
+    console.log(index);
+    that.data.image_photos.splice(index, 1)
+    that.setData({
+      image_photos: that.data.image_photos
+    })
   }
 })
